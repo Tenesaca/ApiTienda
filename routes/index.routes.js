@@ -1,7 +1,9 @@
-import ejemplo from './ejemplos.routes.js';
-import { Router } from 'express';
+import { Router } from "express";
+import producto from "./producto.routes.js";
+
 const indexRoutes = Router();
 
-indexRoutes.use('/ejemplo', ejemplo);
+// localhost:3000/api/producto
+indexRoutes.use("/producto", producto);
 
 export default indexRoutes;
