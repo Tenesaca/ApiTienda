@@ -1,7 +1,12 @@
 import express from 'express';
 import cors from 'cors';
+import path from "path";
 import indexRoutes from '../routes/index.routes.js';
 import * as db from '../db/cnn_mondodb.js';
+import { fileURLToPath } from "url";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 export default class Server {
     constructor() {
